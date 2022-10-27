@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+body{
+  background-color: rgb(226, 226, 226);
+}
+
+.MyApp{
+  display: grid;
+  grid-template-areas: 
+  'h h'
+  'm c';
+  grid-gap: 25px;
+  grid-template-columns: 2fr 10fr;
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.MyApp > div{
+  background-color: rgb(255, 255, 176);
+}
+
+.header{
+  grid-area: h;
+}
+
+.menu{
+  grid-area: m;
+}
+
+.content{
+  grid-area: c;
+}

@@ -1,0 +1,9 @@
+.menu{
+    text-align: center;
+}
+
+.menu a{
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+}
