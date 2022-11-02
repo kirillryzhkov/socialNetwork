@@ -1,0 +1,35 @@
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    margin-bottom: 40px;
+}
+
+.about img{
+    width: 100%;
+}
+
+.posts{
+    margin: 25px;
+    padding: 20px;
+}
+
+input{
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 15px 15px 15px 0px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: rgb(203, 242, 255);
+}
+
+.post img{
+    width: 56px;
+    margin: 0px 10px 0px 10px;
+}
