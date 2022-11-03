@@ -1,0 +1,24 @@
+.message{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 'g p';
+    margin-bottom: 25px;
+}
+
+.gl{
+    display: flex;
+    flex-direction: row;
+    grid-area: g;
+    align-items: center;
+}
+
+.mes{
+    display: flex;
+    grid-area: p;
+    align-items: center;
+}
+
+.prof{
+
+    margin: 10px 10px 10px 15px;
+}
