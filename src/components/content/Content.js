@@ -9,7 +9,6 @@ function Content(){
         <div className="about"><img src={ava} alt='аватар'/>
         <p className="Nf">Павел Павел</p>
         </div>
-        <Posts/>
     </div>)
 
 }
