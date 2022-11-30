@@ -7,14 +7,19 @@ let mas = [{name:'Майк Тайсон', id:1}, {name:'Гульзира', id:2}
 let me = [{name:'Привет подпищеки1', id:1},{name:'Привет подпищеки2', id:2},
 {name:'Привет подпищеки3', id:3},{name:'Привет подпищеки4', id:4}]
 
+let textMes = React.createRef();
 
-function Messages(){
+
+function Messages(props){
+    let putMes = () => {
+        props.addMes(textMes.current.value);
+    }
     return (<div className="messages">
     <div className="dialog">
         {/* <Message id={mas[0].id} name={mas[0].name}/>
         <Message id={mas[1].id} name={mas[1].name}/>
         <Message id={mas[2].id} name={mas[2].name}/> */}
-        {mas.map((e)=><Message id={e.id} name={e.name}/>)}
+        {props.dialog.map((e)=><Message id={e.id} name={e.name}/>)}
     </div>
 
     <div className="text-mes">
@@ -22,11 +27,11 @@ function Messages(){
         <Dialog id={me[1].id} message={me[1].name}></Dialog>
         <Dialog id={me[2].id} message={me[2].name}></Dialog>
         <Dialog id={me[3].id} message={me[3].name}></Dialog> */}
-        {me.map((e)=><Dialog id={e.id} message={e.name}/>)}
+        {props.messages.map((e)=><Dialog id={e.id} message={e.name}/>)}
 
         <div className="send">
-            <input placeholder="Написать сообщение"/>
-            <button className="sendbtn">Отправить</button>
+            <input ref={textMes} placeholder="Написать сообщение"/>
+            <button onClick={putMes} className="sendbtn">Отправить</button>
         </div>
     </div>
 
