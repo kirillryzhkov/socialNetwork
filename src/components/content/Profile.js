@@ -13,7 +13,7 @@ function Profile(props){
     return (<div className="prf">
         
         <Content/>
-        <Posts newTextPost={props.newTextPost} editPost={props.editPost} addPost={props.addPost} posts={props.posts}/>
+        <Posts newTextPost={props.newTextPost} dispatch={props.dispatch} posts={props.posts}/>
     </div>)
 }
 

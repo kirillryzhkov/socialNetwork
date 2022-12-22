@@ -27,9 +27,10 @@ function App(props) {
       {/* <Route exact path='/' element={()=><Profile posts={post} />}/>
       <Route path='/profile' element={()=><Profile posts={post}/>}/>
       <Route path='/messages' element={()=><Messages messages={me} dialog={mas}/>}/> */}
-    <Route exact path='/' element={<Profile newTextPost={props.state.user.newTextPost} editPost={props.editPost} addPost={props.addPost} posts={props.state.user.post} />}/>
-    <Route path='/profile' element={<Profile newTextPost={props.state.user.newTextPost} editPost={props.editPost} addPost={props.addPost} posts={props.state.user.post}/>}/>
-    <Route path='/messages' element={<Messages addMes={props.addMes} dialog={props.state.messages.mas} messages={props.state.messages.me}/>}/>
+    <Route exact path='/' element={<Profile newTextPost={props.state.user.newTextPost} dispatch={props.dispatch} posts={props.state.user.post} />}/>
+    <Route path='/profile' element={<Profile newTextPost={props.state.user.newTextPost} dispatch={props.dispatch} posts={props.state.user.post}/>}/>
+    <Route path='/messages' element={<Messages id={0} newTextMes={props.state.messages.newTextMes} dispatch={props.dispatch} messages={props.state.messages}/>}/> 
+    <Route path={`/dialog/1`} element={<Messages id={1} newTextMes={props.state.messages.newTextMes} dispatch={props.dispatch} messages={props.state.messages}/>}/>
     </Routes>
 
 
